@@ -1,10 +1,10 @@
 test:
  post:
-   command: |
-            mkdir -p $CIRCLE_TEST_REPORTS/junit/
-            find . -type f -regex ".*/target/surefire-reports/.*xml" $CIRCLE_TEST_REPORTS/junit/ \;
-          when: always
-      - store_test_results:
-          path: $CIRCLE_TEST_REPORTS/junit/
-      - store_artifacts:
-          path: $CIRCLE_TEST_REPORTS/junit/
+ command: |
+  mkdir -p $CIRCLE_TEST_REPORTS/junit/
+  find . -type f -regex ".*/target/surefire-reports/.*xml" $CIRCLE_TEST_REPORTS/junit/ \;
+ when: always
+- store_test_results:
+  path: $CIRCLE_TEST_REPORTS/junit/
+- store_artifacts:
+  path: $CIRCLE_TEST_REPORTS/junit/
