@@ -1,7 +1,3 @@
-dependencies:
-  override:
-    - bundle install: # note the colon here
-        timeout: 60 # note the double indentation (four spaces) here
 test:
  post:
   - mkdir -p $CIRCLE_TEST_REPORTS/junit/
